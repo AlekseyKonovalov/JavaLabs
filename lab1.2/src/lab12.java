@@ -1,21 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class lab12 {
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-	
 		Scanner in = new Scanner(System.in);		
-		int a = in.nextInt();//считываем целое число
-		String s = in.next();//считываем строку до первого пробела
-		int b = in.nextInt();//считываем целое число
+		double a = in.nextDouble();
+		String s = in.next();
+		double b = in.nextDouble();
 		
-		int result = calculation(a,b,s);
+		double result = calculation(a,b,s);
 		System.out.println(" = " + result);
 	}
-	
-	static int calculation(int a, int b, String s)
+	static double calculation(double a, double b, String s)
 	{
 		switch(s)
 		{
@@ -34,5 +33,4 @@ public class lab12 {
 		default: return 0;
 		}					
 	}
-
 }
