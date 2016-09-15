@@ -5,12 +5,9 @@ public class gfgfg {
 	public static void main(String[] args)
 	{
 		Scanner in = new Scanner(System.in);	
-		
 		String numb = in.next(); 
 		int system1 = in.nextInt(); 
 		int newSystem = in.nextInt(); 
-		
-	
 		
 		int nummDecI= Integer.parseInt(numb, system1);
 		String nummDecS=Integer.toString(nummDecI);
@@ -21,7 +18,6 @@ public class gfgfg {
 		System.out.println (nummNS + " (" + newSystem + ")");	
 	}
 	static StringBuffer convert(int num, int ns)
-	
 	{
 		 String y="";
 		 int temp=0;
@@ -45,13 +41,10 @@ public class gfgfg {
 				else y += temp;	
 			 	
 			    num = num/ns;  
-			    
 		 }
-		 
 	     StringBuffer x = new StringBuffer(y);
 	     x=(new StringBuffer(y)).reverse();
-	     
-		return x;
+	return x;
 	
-}
+	}
 }
