@@ -21,7 +21,6 @@ public class gfgfg {
 	{
 		 String y="";
 		 int temp=0;
-		
 		 while (num!=0)
 		 {
 			 	temp = num%ns;	
