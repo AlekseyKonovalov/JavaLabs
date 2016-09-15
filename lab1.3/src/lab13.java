@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class lab13 {
+public class gfgfg {
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Scanner in = new Scanner(System.in);	
 		
-		String numb = in.next();//считываем строку до первого пробела
-		int system1 = in.nextInt();//считываем целое число
-		int newSystem = in.nextInt();//считываем целое число
+		String numb = in.next(); 
+		int system1 = in.nextInt(); 
+		int newSystem = in.nextInt(); 
 		
 	
 		
@@ -18,26 +18,40 @@ public class lab13 {
 		
 		System.out.println (numb + " (" + system1 + ")");
 		System.out.println (nummDecS + " (10)");
-		System.out.println (nummNS + " (" + newSystem + ")");
-
+		System.out.println (nummNS + " (" + newSystem + ")");	
 	}
-	static StringBuffer convert(int temp, int ns)
+	static StringBuffer convert(int num, int ns)
+	
 	{
 		 String y="";
-		// if (ns<10)
-		// {
-		 while (temp!=0)
+		 int temp=0;
+		
+		 while (num!=0)
 		 {
-			    y += temp%ns;			   
-			    temp = temp/ns;   			    
+			 	temp = num%ns;	
+			    
+			 	if (temp==10)
+			 		y+="A";
+			 	else if (temp==11)
+			 		y+="B";
+			 	else if (temp==12)
+			 		y+="C";
+				else if (temp==13)
+			 		y+="D";
+				else if (temp==14)
+			 		y+="E";
+				else if (temp==15)
+			 		y+="F";
+				else y += temp;	
+			 	
+			    num = num/ns;  
+			    
 		 }
 		 
 	     StringBuffer x = new StringBuffer(y);
 	     x=(new StringBuffer(y)).reverse();
 	     
 		return x;
-		// }
-		//return y;
-	}
-
+	
+}
 }
