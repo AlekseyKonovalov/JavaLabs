@@ -106,7 +106,7 @@ public class Interface{
                     newBrokenLine();
                     break;
                 }
-                
+
             }
         }
     }
