@@ -5,10 +5,10 @@ import static java.lang.Math.sqrt;
 
 
 public class Line{
-    private ArrayList points;
+    ArrayList<Point> points;
 
-    public Line (){
-        points=new ArrayList(100);
+    public Line(){
+        points=new ArrayList<Point>();
     }
 
     public void resizeLine(int size){
@@ -20,13 +20,7 @@ public class Line{
     }
 
     public Point getPoint (int index){
-        return  (Point)points.get(index);
-    }
-
-    public void increaseSize(){
-        ArrayList tempArray= new ArrayList(points.size()*2);
-        tempArray.addAll(0,points);
-        points=tempArray;
+        return points.get(index);
     }
 
     public double pointsLenght(){
@@ -36,8 +30,8 @@ public class Line{
 
         for (int i=1; i<points.size(); i++)
         {
-            temp=(Point)points.get(i-1);
-            temp2=(Point)points.get(i);
+            temp=points.get(i-1);
+            temp2=points.get(i);
             lenght+=sqrt(pow((temp.x-temp2.x),2)+pow((temp.y-temp2.y),2));
         }
         return lenght;
@@ -46,7 +40,7 @@ public class Line{
     public int searchPoint(Point p1) { // вернет индекс искомой точки
         Point temp = new Point();
         for (int i = 1; i < points.size(); i++) {
-            temp = (Point) points.get(i);
+            temp = points.get(i);
             if (temp.comparePoints(p1.x,p1.y))
                 return i;
         }
