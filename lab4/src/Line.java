@@ -51,7 +51,7 @@ public class Line{
         Point temp = new Point();
         String strLine="";
         for (int i = 0; i < points.size(); i++) {
-            temp = (Point) points.get(i);
+            temp = points.get(i);
             strLine+= temp.pointToString();
         }
         return  strLine;

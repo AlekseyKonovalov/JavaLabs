@@ -1,29 +1,33 @@
-
 import java.util.Scanner;
 
 public class lab34 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int  countBeforeTheComa = in.nextInt();
+
+
         float a = 0.3f;
         float b = 0.4f;
         float sum = a + b;
-
-
-
-
         float c = 0.7f;
-     //   System.out.println(a.compareTo(b);
 
-        compare(a, b, countBeforeTheComa );
+        System.out.println("Введите параметр , обозначающий число знаков после запятой: ");
+        Scanner sc = new Scanner(System.in);
+        int countBefore=sc.nextInt();
+
+        System.out.println(compare(sum,c,countBefore));
     }
 
-    static void compare(float a , float b, int countBeforeTheComa){
+    static boolean compare(float a , float b, int precision){
 
-        a=Math.round(countBeforeTheComa);
-        System.out.println(a);
+        if (Float.isNaN(a) && Float.isNaN(b))
+            return true;
 
+        if(Float.floatToIntBits(a) == Float.floatToIntBits(b))
+            return true;
 
+        if (Math.abs(a - b) < Math.pow(10, precision * (-1)))
+            return true;
+        else
+            return false;
     }
 
 }
