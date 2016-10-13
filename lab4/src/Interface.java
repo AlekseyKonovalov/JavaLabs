@@ -15,7 +15,7 @@ public class Interface{
     private Point inputPoint(){
         Point tempPoint=new Point();
         System.out.println("Укажите координату X :");
-        int tmpCoordinat=scan.nextInt();
+        double tmpCoordinat=scan.nextInt();
         tempPoint.x=tmpCoordinat;
         System.out.println("Укажите координату Y :");
         tmpCoordinat=scan.nextInt();

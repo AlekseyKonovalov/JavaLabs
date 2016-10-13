@@ -39,8 +39,8 @@ public class Point{
         return  strPoint;
     }
 
-    public boolean comparePoints (double x2 , double y2){
-        if  (( x==x2) && (y==y2) )
+    public boolean equals (Point p1){
+        if  (( x==p1.x) && (y==p1.y) )
             return true;
         else return false;
     }

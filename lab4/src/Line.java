@@ -39,10 +39,12 @@ public class Line{
 
     public int searchPoint(Point p1) { // вернет индекс искомой точки
         Point temp = new Point();
-        for (int i = 1; i < points.size(); i++) {
+        for (int i = 0; i < points.size(); i++) {
             temp = points.get(i);
-            if (temp.comparePoints(p1.x,p1.y))
+
+            if (p1.equals(temp)) {
                 return i;
+            }
         }
         return -1;
     }
