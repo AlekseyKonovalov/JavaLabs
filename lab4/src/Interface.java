@@ -28,7 +28,7 @@ public class Interface{
     }
 
     private void outLinePoints(){
-        System.out.println (brokenLine.stringLine());
+        System.out.println (brokenLine.toString());
     }
 
     private  void outLineSum(){

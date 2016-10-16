@@ -49,12 +49,12 @@ public class Line{
         return -1;
     }
 
-    public String stringLine(){
+    public String toString(){
         Point temp = new Point();
         String strLine="";
         for (int i = 0; i < points.size(); i++) {
             temp = points.get(i);
-            strLine+= temp.pointToString();
+            strLine+= temp.toString();
         }
         return  strLine;
     }

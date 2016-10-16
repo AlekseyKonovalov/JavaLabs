@@ -34,7 +34,7 @@ public class Point{
         return result;
     }
 
-    public String pointToString(){
+    public String toString(){
         String strPoint="(" + Double.toString(x) + ";"+ Double.toString(y) + ")";
         return  strPoint;
     }
