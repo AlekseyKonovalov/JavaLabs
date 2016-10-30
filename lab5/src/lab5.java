@@ -32,6 +32,8 @@ public class lab5 {
 
         myQueue.deleteTaskById(6);
 
+        myQueue.changeThePriorityTasks(3, 9);
+
         System.out.println("_____________");
 
         while (!myQueue.isEmpty()) {

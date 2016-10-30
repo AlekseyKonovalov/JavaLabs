@@ -132,6 +132,7 @@ public class Queue {
                     temp=QueueTasks[i];
                     deleteTaskById(QueueTasks[i].getId());
                     insertTaskinQueue(temp);
+                    break;
                 }
             }
         }
