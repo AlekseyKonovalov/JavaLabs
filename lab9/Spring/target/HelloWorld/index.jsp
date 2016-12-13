@@ -15,7 +15,7 @@
         <a href="hello?name=Eric">Click Here</a>
     </h3>
     <h3>
-        <a href="decoder?">Here Encoder</a>
+        <a href="encoder">Here Encoder</a>
     </h3>
     <h3>
         <a href="decoder">Here Decoder</a>
