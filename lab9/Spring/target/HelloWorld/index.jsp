@@ -15,10 +15,10 @@
         <a href="hello?name=Eric">Click Here</a>
     </h3>
     <h3>
-        <a href="hello?name=Eric"> Here Encoder</a>
+        <a href="decoder?">Here Encoder</a>
     </h3>
     <h3>
-        <a href="hello?name=Eric">Here Decoder</a>
+        <a href="decoder">Here Decoder</a>
     </h3>
 </center>
 </body>
