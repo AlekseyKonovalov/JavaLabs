@@ -79,11 +79,20 @@ class Philosopher implements Runnable {
 
     void takeForks() {
         // TODO synchronize
-        locks[fork1.number].lock();
-        locks[fork2.number].lock();
+      //  while (true) {
+            locks[fork1.number].lock();
+            locks[fork2.number].lock();
 
-        fork1.take(number);
-        fork2.take(number);
+            fork1.take(number);
+            fork2.take(number);
+
+        /*    if (locks[fork2.number].tryLock()) {
+                fork1.take(number);
+                fork2.take(number);
+                break;
+
+            } else locks[fork1.number].unlock();
+        }*/
     }
 
     void putForks() {
