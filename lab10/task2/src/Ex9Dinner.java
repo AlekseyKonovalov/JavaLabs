@@ -107,9 +107,18 @@ public class Ex9Dinner {
         }
 
         Philosopher[] philosophers = new Philosopher[5];
+
         for (int i = 0; i < philosophers.length; i++) {
-            philosophers[i] = new Philosopher(i, forks[i], forks[(i + 1) % forks.length]);
+            if ( i == philosophers.length-1 ){
+                philosophers[i] = new Philosopher(i, forks[0], forks[(i) % forks.length]);
+            }
+            else {
+                philosophers[i] = new Philosopher(i, forks[i], forks[(i + 1) % forks.length]);
+            }
         }
+
+
+
 
         for (int i = 0; i < philosophers.length; i++) {
             new Thread(philosophers[i]).start();
